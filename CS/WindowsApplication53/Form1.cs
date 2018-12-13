@@ -38,14 +38,7 @@ namespace WindowsApplication53 {
         private void pivotGridControl1_CustomDrawFieldValue(object sender, 
             DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs e) {
             if (e.Area == DevExpress.XtraPivotGrid.PivotArea.ColumnArea) {
-                Rectangle rect = e.Bounds;
-                ControlPaint.DrawBorder3D(e.Graphics, e.Bounds);
-                Brush brush = e.GraphicsCache.GetSolidBrush(Color.LightYellow);
-                rect.Inflate(-1, -1);
-                e.Graphics.FillRectangle(brush, rect);
-                e.Appearance.DrawString(e.GraphicsCache, e.Info.Caption, e.Info.CaptionRect);
-                e.Painter.DrawIndicator(e.Info);               
-                e.Handled = true;
+                e.Appearance.BackColor = Color.GreenYellow;
             }
             else if (e.Area == DevExpress.XtraPivotGrid.PivotArea.RowArea) {
                 e.Painter.DrawObject(e.Info);
