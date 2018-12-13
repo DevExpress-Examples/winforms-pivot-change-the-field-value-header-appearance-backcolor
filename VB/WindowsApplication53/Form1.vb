@@ -40,14 +40,7 @@ Namespace WindowsApplication53
         Private Sub pivotGridControl1_CustomDrawFieldValue(ByVal sender As Object,
             ByVal e As DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs) Handles pivotGridControl1.CustomDrawFieldValue
             If e.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea Then
-                Dim rect As Rectangle = e.Bounds
-                ControlPaint.DrawBorder3D(e.Graphics, e.Bounds)
-                Dim brush As Brush = e.GraphicsCache.GetSolidBrush(Color.LightYellow)
-                rect.Inflate(-1, -1)
-                e.Graphics.FillRectangle(brush, rect)
-                e.Appearance.DrawString(e.GraphicsCache, e.Info.Caption, e.Info.CaptionRect)
-                e.Painter.DrawIndicator(e.Info)
-                e.Handled = True
+                e.Appearance.BackColor = Color.GreenYellow
             ElseIf e.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea Then
                 e.Painter.DrawObject(e.Info)
                 e.Painter.DrawIndicator(e.Info)
