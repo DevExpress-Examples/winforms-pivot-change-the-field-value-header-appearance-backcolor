@@ -43,7 +43,7 @@ namespace WindowsApplication53 {
             else if (e.Area == DevExpress.XtraPivotGrid.PivotArea.RowArea) {
                 e.Painter.DrawObject(e.Info);
                 e.Painter.DrawIndicator(e.Info);
-                e.Graphics.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
+                e.GraphicsCache.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
                 e.Handled = true;
             }
         }
