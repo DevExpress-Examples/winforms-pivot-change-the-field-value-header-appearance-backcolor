@@ -1,4 +1,4 @@
-namespace WindowsApplication53
+namespace CustomDrawFieldValueEventExample
 {
     partial class Form1
     {
@@ -62,7 +62,7 @@ namespace WindowsApplication53
             this.pivotGridControl1.OptionsDataField.AreaIndex = 2;
             this.pivotGridControl1.OptionsView.RowTotalsLocation = DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Tree;
             this.pivotGridControl1.OptionsView.ShowTotalsForSingleValues = true;
-            this.pivotGridControl1.Size = new System.Drawing.Size(522, 252);
+            this.pivotGridControl1.Size = new System.Drawing.Size(550, 300);
             this.pivotGridControl1.TabIndex = 0;
             this.pivotGridControl1.CustomDrawFieldValue += new DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventHandler(this.pivotGridControl1_CustomDrawFieldValue);
             // 
@@ -145,11 +145,10 @@ namespace WindowsApplication53
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 252);
+            this.ClientSize = new System.Drawing.Size(550, 300);
             this.Controls.Add(this.pivotGridControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "CustomDrawFieldValue Event";
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();

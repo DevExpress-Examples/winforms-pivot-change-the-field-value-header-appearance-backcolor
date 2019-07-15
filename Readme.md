@@ -3,15 +3,8 @@
 
 * [Form1.cs](./CS/WindowsApplication53/Form1.cs) (VB: [Form1.vb](./VB/WindowsApplication53/Form1.vb))
 <!-- default file list end -->
-# How to change the Field Value Header appearance backcolor or draw it manually
+# How to Change the Field Value Header Background with the CustomDrawFieldValue Event
 
+This exampole handles the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor.
 
-<p><b>Update:</b></br>
-Starting with version 18.2.3, you can change the Field Value background color by setting the corresponding Appearance.BackColor property. In this case, the Skin background image will be ignored and we will manually draw the background using the specified color. </p>
-</br>
-
-<p>If <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressLookAndFeelUserLookAndFeel_Styletopic">UserLookAndFeel.Style</a> is equal to <em>Skin</em>, the XtraPivotGrid control uses the <a href="http://documentation.devexpress.com/#WindowsForms/CustomDocument2399">Skins</a> technology to draw its content. With this approach, all headers are drawn using a specific bitmap provided by a corresponding skin element. The appearance back color settings have no effect in this instance. If you want to draw a field header using a custom color, you can draw the field header manually using the <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_CustomDrawFieldValuetopic">PivotGridControl.CustomDrawFieldValue</a> event.<br><br>Note that the DrawIndicator method can throw exceptions in versions 15.1.3 - 15.1.5. We have fixed this issue in the context of the <a href="https://www.devexpress.com/Support/Center/p/T279173">DrawIndicator method call throws an exception after updating to 15.1.5</a> ticket.</p>
-
-<br/>
-
-
+![screenshot](/images/screenshot.png)

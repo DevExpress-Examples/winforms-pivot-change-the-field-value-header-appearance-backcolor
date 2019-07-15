@@ -1,22 +1,40 @@
+using DevExpress.XtraPivotGrid;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
-namespace WindowsApplication53 {
-    public partial class Form1 : Form {
+namespace CustomDrawFieldValueEventExample
+{
+    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    {
         public Form1() {
             InitializeComponent();
-        }
-        private void Form1_Load(object sender, EventArgs e) {
+            this.Load += Form1_Load;
+            pivotGridControl1.OptionsView.RowTreeWidth = 150;
             PopulateTable();
             pivotGridControl1.RefreshData();
-            pivotGridControl1.BestFitColumnArea();
-
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pivotGridControl1.BestFitColumnArea();
+        }
+
+        private void pivotGridControl1_CustomDrawFieldValue(object sender, PivotCustomDrawFieldValueEventArgs e)
+        {
+            if (e.Area == PivotArea.ColumnArea)
+            {
+                e.Appearance.BackColor = Color.GreenYellow;
+            }
+            else if (e.Area == PivotArea.RowArea)
+            {
+                e.Painter.DrawObject(e.Info);
+                e.Painter.DrawIndicator(e.Info);
+                e.GraphicsCache.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
+                e.Handled = true;
+            }
+        }
+
         private void PopulateTable() {
             DataTable myTable = dataSet1.Tables["Data"];
             myTable.Rows.Add(new object[] { "UK", DateTime.Today.AddYears(-1), 4, 5 });
@@ -33,20 +51,5 @@ namespace WindowsApplication53 {
             myTable.Rows.Add(new object[] { "France", DateTime.Today, 11, 1 });
             myTable.Rows.Add(new object[] { "France", DateTime.Today.AddDays(1), 10, 3 });
         }
-
-        #region #CustomDrawFieldValueEvent
-        private void pivotGridControl1_CustomDrawFieldValue(object sender, 
-            DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs e) {
-            if (e.Area == DevExpress.XtraPivotGrid.PivotArea.ColumnArea) {
-                e.Appearance.BackColor = Color.GreenYellow;
-            }
-            else if (e.Area == DevExpress.XtraPivotGrid.PivotArea.RowArea) {
-                e.Painter.DrawObject(e.Info);
-                e.Painter.DrawIndicator(e.Info);
-                e.GraphicsCache.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
-                e.Handled = true;
-            }
-        }
-        #endregion #CustomDrawFieldValueEvent
     }
 }
