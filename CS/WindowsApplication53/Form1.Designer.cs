@@ -28,6 +28,11 @@ namespace CustomDrawFieldValueEventExample
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding4 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding5 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.dataSet1 = new System.Data.DataSet();
             this.dataTable1 = new System.Data.DataTable();
@@ -35,11 +40,11 @@ namespace CustomDrawFieldValueEventExample
             this.dataColumn2 = new System.Data.DataColumn();
             this.dataColumn3 = new System.Data.DataColumn();
             this.dataColumn4 = new System.Data.DataColumn();
-            this.fieldCountry = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldCountry1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldYear = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldIncome = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldDate = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldOutcome = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldIncome1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldDate1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldOutcome1 = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
@@ -52,13 +57,14 @@ namespace CustomDrawFieldValueEventExample
             this.pivotGridControl1.DataSource = this.dataSet1;
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldCountry,
+            this.fieldCountry1,
             this.fieldYear,
-            this.fieldIncome,
-            this.fieldDate,
-            this.fieldOutcome});
+            this.fieldIncome1,
+            this.fieldDate1,
+            this.fieldOutcome1});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
             this.pivotGridControl1.OptionsDataField.AreaIndex = 2;
             this.pivotGridControl1.OptionsView.RowTotalsLocation = DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Tree;
             this.pivotGridControl1.OptionsView.ShowTotalsForSingleValues = true;
@@ -100,46 +106,49 @@ namespace CustomDrawFieldValueEventExample
             this.dataColumn4.ColumnName = "Outcome";
             this.dataColumn4.DataType = typeof(decimal);
             // 
-            // fieldCountry
+            // fieldCountry1
             // 
-            this.fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-            this.fieldCountry.AreaIndex = 0;
-            this.fieldCountry.FieldName = "Country";
-            this.fieldCountry.Name = "fieldCountry";
+            this.fieldCountry1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldCountry1.AreaIndex = 0;
+            dataSourceColumnBinding1.ColumnName = "Country";
+            this.fieldCountry1.DataBinding = dataSourceColumnBinding1;
+            this.fieldCountry1.Name = "fieldCountry1";
             // 
             // fieldYear
             // 
             this.fieldYear.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fieldYear.AreaIndex = 0;
             this.fieldYear.Caption = "Year";
-            this.fieldYear.FieldName = "Date";
-            this.fieldYear.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            dataSourceColumnBinding2.ColumnName = "Date";
+            dataSourceColumnBinding2.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.fieldYear.DataBinding = dataSourceColumnBinding2;
             this.fieldYear.Name = "fieldYear";
-            this.fieldYear.UnboundFieldName = "fieldYear";
             // 
-            // fieldIncome
+            // fieldIncome1
             // 
-            this.fieldIncome.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldIncome.AreaIndex = 0;
-            this.fieldIncome.FieldName = "Income";
-            this.fieldIncome.Name = "fieldIncome";
+            this.fieldIncome1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldIncome1.AreaIndex = 0;
+            dataSourceColumnBinding3.ColumnName = "Income";
+            this.fieldIncome1.DataBinding = dataSourceColumnBinding3;
+            this.fieldIncome1.Name = "fieldIncome1";
             // 
-            // fieldDate
+            // fieldDate1
             // 
-            this.fieldDate.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldDate.AreaIndex = 1;
-            this.fieldDate.Caption = "Date";
-            this.fieldDate.FieldName = "Date";
-            this.fieldDate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
-            this.fieldDate.Name = "fieldDate";
-            this.fieldDate.UnboundFieldName = "fieldDate";
+            this.fieldDate1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldDate1.AreaIndex = 1;
+            this.fieldDate1.Caption = "Date";
+            dataSourceColumnBinding4.ColumnName = "Date";
+            dataSourceColumnBinding4.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
+            this.fieldDate1.DataBinding = dataSourceColumnBinding4;
+            this.fieldDate1.Name = "fieldDate1";
             // 
-            // fieldOutcome
+            // fieldOutcome1
             // 
-            this.fieldOutcome.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldOutcome.AreaIndex = 1;
-            this.fieldOutcome.FieldName = "Outcome";
-            this.fieldOutcome.Name = "fieldOutcome";
+            this.fieldOutcome1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldOutcome1.AreaIndex = 1;
+            dataSourceColumnBinding5.ColumnName = "Outcome";
+            this.fieldOutcome1.DataBinding = dataSourceColumnBinding5;
+            this.fieldOutcome1.Name = "fieldOutcome1";
             // 
             // Form1
             // 
@@ -164,12 +173,12 @@ namespace CustomDrawFieldValueEventExample
         private System.Data.DataColumn dataColumn1;
         private System.Data.DataColumn dataColumn2;
         private System.Data.DataColumn dataColumn3;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldCountry;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCountry1;
         private DevExpress.XtraPivotGrid.PivotGridField fieldYear;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldIncome;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldDate;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldIncome1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldDate1;
         private System.Data.DataColumn dataColumn4;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldOutcome;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldOutcome1;
     }
 }
 
