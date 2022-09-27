@@ -17,8 +17,8 @@ This example handles the [CustomDrawFieldValue](https://docs.devexpress.com/Wind
 
 Handle the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor. You can access fields headers two ways:
 
-- Use the [PivotCustomDrawEventArgs.Appearance](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawEventArgs.Appearance) proeprty to get the appearance object for the painted element and change its background color.
-- Use the [PivotCustomDrawFieldValueEventArgs.Painter](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Painter) property to get the Painter object and implement the default element painting mechanism. Pass the `DevExpress.XtraPivotGrid.ViewInfo.PivotHeaderObjectInfoArgs` object (the [](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Info) property) to the `Painter` object's `DrawObject()` method.
+- Use the [e.Appearance](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawEventArgs.Appearance) proeprty to get the appearance object for the painted element and change its background color.
+- Use the [e.Painter](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Painter) property to get the Painter object and implement the default element painting mechanism. Pass the `DevExpress.XtraPivotGrid.ViewInfo.PivotHeaderObjectInfoArgs` object (the [](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Info) property) to the `Painter` object's `DrawObject()` method.
 
 ## Documentation
 
@@ -27,5 +27,5 @@ Handle the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/W
 ## More Examples
 
 - [Pivot Grid for WinForms - Highlight Field Headers when they are Filtered](https://github.com/DevExpress-Examples/how-to-highlight-field-headers-when-they-are-filtered-e545)
-- [Pivot Grid for WinForms - Customize Cells]([https://github.com/DevExpress-Examples/how-to-change-the-field-value-header-appearance-backcolor-or-draw-it-manually-e2809](https://github.com/DevExpress-Examples/winforms-pivot-customize-cell))
+- [Pivot Grid for WinForms - Customize Cells](https://github.com/DevExpress-Examples/winforms-pivot-customize-cell))
 - [Pivot Grid for WinForms - Draw a Custom Element when a User Hovering Over Field Value with a Mouse](https://github.com/DevExpress-Examples/how-to-draw-a-custom-element-when-a-user-hovering-over-field-value-with-a-mouse-e2228)
