@@ -3,10 +3,8 @@ using System;
 using System.Data;
 using System.Drawing;
 
-namespace CustomDrawFieldValueEventExample
-{
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
-    {
+namespace CustomDrawFieldValueEventExample {
+    public partial class Form1 : DevExpress.XtraEditors.XtraForm {
         public Form1() {
             InitializeComponent();
             this.Load += Form1_Load;
@@ -15,19 +13,15 @@ namespace CustomDrawFieldValueEventExample
             pivotGridControl1.RefreshData();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) {
             pivotGridControl1.BestFitColumnArea();
         }
 
-        private void pivotGridControl1_CustomDrawFieldValue(object sender, PivotCustomDrawFieldValueEventArgs e)
-        {
-            if (e.Area == PivotArea.ColumnArea)
-            {
+        private void pivotGridControl1_CustomDrawFieldValue(object sender, PivotCustomDrawFieldValueEventArgs e) {
+            if (e.Area == PivotArea.ColumnArea) {
                 e.Appearance.BackColor = Color.GreenYellow;
             }
-            else if (e.Area == PivotArea.RowArea)
-            {
+            else if (e.Area == PivotArea.RowArea) {
                 e.Painter.DrawObject(e.Info);
                 e.Painter.DrawIndicator(e.Info);
                 e.GraphicsCache.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
