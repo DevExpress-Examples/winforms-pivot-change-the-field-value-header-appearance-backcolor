@@ -9,7 +9,7 @@ This example handles the [CustomDrawFieldValue](https://docs.devexpress.com/Wind
 
 ![screenshot](/images/screenshot.png)
 
-## Files to look at
+## Files to Review
 
 [Form1.cs](./CS/WindowsApplication53/Form1.cs) (VB: [Form1.vb](./VB/WindowsApplication53/Form1.vb))
 
