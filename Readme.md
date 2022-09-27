@@ -5,7 +5,7 @@
 
 # WinForms Pivot Grid - Change the Field Value Header Background
 
-This exampole handles the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor. 
+This example handles the [CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor. 
 
 ![screenshot](/images/screenshot.png)
 
