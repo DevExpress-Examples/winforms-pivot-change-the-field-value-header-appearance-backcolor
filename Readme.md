@@ -15,10 +15,10 @@ This example handles the [CustomDrawFieldValue](https://docs.devexpress.com/Wind
 
 ## Example Overview
 
-Handle the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor. You can access fields headers two ways:
+Handle the [PivotGridControl.CustomDrawFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomDrawFieldValue) event to change the header's backcolor. You can customize fields headers two ways:
 
-- Use the [e.Appearance](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawEventArgs.Appearance) proeprty to get the appearance object for the painted element and change its background color.
-- Use the [e.Painter](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Painter) property to get the Painter object and implement the default element painting mechanism. Pass the `PivotHeaderObjectInfoArgs` object (the [e.Info](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Info) property) to the `Painter` object's `DrawObject()` method.
+- To modify the appearance of the field header, use the [e.Appearance](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawEventArgs.Appearance) proeprty to get the appearance object for the painted element and change its background color.
+- To drow field headers manually, use the [e.Painter](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Painter) property to get the Painter object and implement the default element painting mechanism. Pass the `PivotHeaderObjectInfoArgs` object (the [e.Info](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomDrawFieldValueEventArgs.Info) property) to the `Painter` object's `DrawObject()` method.
 
 ## Documentation
 
